@@ -1,34 +1,34 @@
 # Welcome to Kindred AceBook
 ###### Built by Nikita Douglas, Sophie Worsnop, Tim Bishop and Victor Vallet. Find us on github here: [Nikita](https://github.com/NikitaDouglas), [Sophie](https://github.com/sophiewo), [Tim](https://github.com/TimCPB), [Victor](https://github.com/victorvallet)
 
-## Visit
+## Visit:
 - Our deployed app using heroku [here!](https://still-brook-88034.herokuapp.com/)
 - Our [wiki](https://github.com/NikitaDouglas/acebook-Kindred/wiki) detailing our process and walkthroughs
 
 ## Built under TDD using:
 
-- Deployment
+Deployment
  - Heroku
  - Travis
  
-- Framework and Languages:
+Framework and Languages:
  - Ruby on Rails
  - Javascript
  
-- Libraries:
+Libraries:
  - JQuery
  
-- Database:
+Database:
  - Postgres
  - PG
  - TablePlus
  
-- Testing
+Testing
  - RSpec
  - Rubocop
  - SimpleCov
 
-- Other Gems
+Other Gems
  - Devise
  
 ## To use our repo:
