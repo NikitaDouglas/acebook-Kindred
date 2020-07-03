@@ -1,11 +1,5 @@
 # Welcome to Kindred AceBook
-###### Built by Nikita Douglas, Sophie Worsnop, Tim Bishop and Victor Vallet
-
-###### Find us on github here:
-- [Nikita](https://github.com/NikitaDouglas)
-- [Sophie](https://github.com/sophiewo)
-- [Tim](https://github.com/TimCPB)
-- [Victor](https://github.com/victorvallet)
+###### Built by Nikita Douglas, Sophie Worsnop, Tim Bishop and Victor Vallet. Find us on github here: [Nikita](https://github.com/NikitaDouglas), [Sophie](https://github.com/sophiewo), [Tim](https://github.com/TimCPB), [Victor](https://github.com/victorvallet)
 
 ## Visit
 - Our deployed app using heroku [here!](https://still-brook-88034.herokuapp.com/)
