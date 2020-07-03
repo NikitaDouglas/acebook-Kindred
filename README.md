@@ -1,22 +1,23 @@
-# AceBook
+# Welcome to Kindred AceBook
 
-REQUIRED INSTRUCTIONS:
+### build by Nikita Douglas, Sophie Worsnop, Tim Bishop and Victor Vallet
 
-1. Fork this repository to `acebook-teamname` and customize
-the below**
+Find us on github here:
+[Nikita](https://github.com/NikitaDouglas)
+[Sophie](https://github.com/sophiewo)
+[Tim]
+[Victor]
 
-[You can find the engineering project outline here.](https://github.com/makersacademy/course/tree/master/engineering_projects/rails)
 
-2. The card wall is here: <please update>
 
-## How to contribute to this project
-See [CONTRIBUTING.md](CONTRIBUTING.md)
+Visit our deployed app [here!](url)
+Visti our [wiki](https://github.com/NikitaDouglas/acebook-Kindred/wiki) detailing our process and walkthroughs
 
-## Quickstart
 
-First, clone this repository. Then:
+To use our repo:
 
 ```bash
+> git clone <repo address>
 > bundle install
 > bin/rails db:create
 > bin/rails db:migrate
