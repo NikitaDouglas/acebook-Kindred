@@ -7,28 +7,28 @@
 
 ## Built under TDD using:
 
-Deployment
+**Deployment**
  - Heroku
  - Travis
  
-Framework and Languages:
- - Ruby on Rails
+**Framework and Languages**
+- Ruby on Rails
  - Javascript
  
-Libraries:
+**Libraries**
  - JQuery
  
-Database:
+**Database**
  - Postgres
  - PG
  - TablePlus
  
-Testing
+**Testing**
  - RSpec
  - Rubocop
  - SimpleCov
 
-Other Gems
+**Other Gems**
  - Devise
  
 ## To use our repo:
