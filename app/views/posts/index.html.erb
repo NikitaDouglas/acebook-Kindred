@@ -1,5 +1,10 @@
 <% @posts.each do |post| %>
-  <p><%= post.message %></p>
+  <p>
+  <form>
+  <%= post.message %>
+  <input type="button" value="<3" id="like">
+  </form>
+  </p>
 <% end %>
 
 <%= link_to new_post_path do %>
