@@ -18,7 +18,7 @@ RSpec.feature 'Timeline', type: :feature do
     sign_up
     visit('/posts')
     click_link 'Write a post...'
-    fill_in 'Nickname', with: 'So'
+    fill_in 'Name', with: 'So'
     fill_in 'Message', with: 'hey there'
     click_button 'Submit'
     expect(page).to have_content('So')
