@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0DA98D;">
-  <a class="navbar-brand" href="/">Kindredbook</a>
+  <a class="navbar-brand" href="/">KindredBook</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -18,11 +18,10 @@
       <h1>Welcome to KindredBook</h1>
       <p class="lead text-muted">Created by Nikita, Sophie, Tim and Victor.</p>
       <p>
-        <a href="/posts/new" class="btn btn-primary my-2">Write a post...</a>
+        <a href="/posts/new" class="btn btn-danger my-2">Write a post...</a>
       </p>
     </div>
   </section>
-
 
 <% @posts.each do |post| %>
 <div class="album py-5 bg-light">
@@ -35,7 +34,7 @@
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <form>
-                    <input type="button" class="btn btn-sm btn-outline-secondary" value="<3" id="like">
+                    <input type="button" class="btn btn-danger my-2" value="♥️" id="like">
                   </form>
                 </div>
                 <small class="text-muted">x Likes</small>
