@@ -1,6 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0DA98D;">
+  <a class="navbar-brand" href="/">Kindred</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="/">Home<span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="/posts">Posts</a>
+    </div>
+  </div>
+  <%= button_to "Sign Out", destroy_user_session_path, method: :delete  %>
+</nav>
+
+
+<br>
+<section class="text-center">
 <%= form_for @post do |form| %>
   <%= form.label :message %>
   <%= form.text_field :message %>
 
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+
+  <%= form.hidden_field :email %>
+
   <%= form.submit "Submit" %>
 <% end %>
+</section>

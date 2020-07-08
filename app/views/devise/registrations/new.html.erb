@@ -1,3 +1,5 @@
+<body class="text-center">
+
 <h2>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -25,5 +27,7 @@
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
-
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+</body>
 <%= render "devise/shared/links" %>
