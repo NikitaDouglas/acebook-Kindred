@@ -1,2 +1,5 @@
 <h2>Hopefully a post will appear here:<h2>
-<p><%= @post.message %></p>
+<p><%= @post.message %> Likes: <%= @post.likes.count %></p>
+<div id="likes">
+  <%= render partial: "likes" %>
+</div>
