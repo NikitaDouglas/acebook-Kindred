@@ -48,7 +48,7 @@
                   <% else %>
                     <%= link_to "Like", post_like_path(post), method: :post %>
                   <% end %>
-                <small class="text-muted"><%= post.likes.count %> Likes</small>
+                <small class="text-muted"><%= post.likes.where(post_id: post.id).count %> Likes</small>
               </div>
             </div>
           </div>

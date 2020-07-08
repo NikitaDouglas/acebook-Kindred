@@ -9,6 +9,6 @@ class User < ApplicationRecord
   has_many :likes
 
   def likes?(post)
-    post.likes.where(user_id: id).any?
+    post.likes.where(user_id: id, post_id: post.id).any?
   end
 end
