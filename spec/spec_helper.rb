@@ -2,6 +2,7 @@
 
 require 'simplecov'
 require 'simplecov-console'
+require 'rails_helper'
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
                                                                  SimpleCov::Formatter::Console
                                                                  # Want a nice code coverage website?
@@ -118,6 +119,9 @@ RSpec.configure do |config|
   #   # test failures related to randomization by passing the same `--seed` value
   #   # as the one that triggered the failure.
   #   Kernel.srand config.seed
+  # capybara in our tests
+  config.include Capybara::DSL
+
   config.after :each do
     Warden.test_reset!
   end
