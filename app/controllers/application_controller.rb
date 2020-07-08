@@ -12,5 +12,6 @@ class ApplicationController < ActionController::Base
     '/posts'
   end
 
-  def destroy_user_session_path; end
+  def destroy_user_session_path; 
+  end
 end
