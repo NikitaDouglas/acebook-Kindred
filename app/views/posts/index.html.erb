@@ -1,12 +1,47 @@
-<% @posts.each do |post| %>
-  <p>
-  <form>
-  <%= post.message %>
-  <input type="button" value="<3" id="like">
-  </form>
-  </p>
-<% end %>
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0DA98D;">
+  <a class="navbar-brand" href="/">KindredBook</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="/">Home<span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="/posts">Posts</a>
+      <a class="nav-item nav-link" href="#">Account</a>
+      <a class="nav-item nav-link" href="/users/sign_out">Signout</a>
+    </div>
+  </div>
+</nav>
 
-<%= link_to new_post_path do %>
-  New post
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1>Welcome to KindredBook</h1>
+      <p class="lead text-muted">Created by Nikita, Sophie, Tim and Victor.</p>
+      <p>
+        <a href="/posts/new" class="btn btn-danger my-2">Write a post...</a>
+      </p>
+    </div>
+  </section>
+
+<% @posts.each do |post| %>
+<div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <p class="card-text"> <%= post.message %></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <form>
+                    <input type="button" class="btn btn-danger my-2" value="♥️" id="like">
+                  </form>
+                </div>
+                <small class="text-muted">x Likes</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 <% end %>
