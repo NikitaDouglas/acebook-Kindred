@@ -1,7 +1,7 @@
 class Posts::LikesController < ApplicationController
 
   before_action :authenticate_user!
-
+  
   def create
 
     @posts.likes.where(user_id: current_user.id).first_or_create
