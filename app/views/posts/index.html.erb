@@ -40,9 +40,9 @@
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <% if user_signed_in? && current_user.likes?(post) %>
-                    <%= button_to "✖️", post_like_path(post), :class => "btn btn-secondary my-2", method: :delete %>
+                    <%= button_to "✖️", post_like_path(post), :class => "btn btn-light my-2", method: :delete %>
                   <% else %>
-                    <%= button_to "❤️", post_like_path(post), :class => "btn btn-danger my-2", method: :post %>
+                    <%= button_to "♥️", post_like_path(post), :class => "btn btn-danger my-2", method: :post %>
                   <% end %>
                 </div>
                 <small class="text-muted"><%= post.likes.where(post_id: post.id).count %> ♥️</small>
