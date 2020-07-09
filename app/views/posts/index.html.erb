@@ -39,16 +39,13 @@
                 <p class="text-muted"> <%= post.created_at %></p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <form>
-                    <input type="button" class="btn btn-danger my-2" value="♥️" id="like">
-                  </form>
-                </div>
-                <% if user_signed_in? && current_user.likes?(post) %>
-                    <%= link_to "Unlike", post_like_path(post), method: :delete %>
+                  <% if user_signed_in? && current_user.likes?(post) %>
+                    <%= button_to "♥️", post_like_path(post), :class => "btn btn-secondary my-2", method: :delete %>
                   <% else %>
-                    <%= link_to "Like", post_like_path(post), method: :post %>
+                    <%= button_to "♥️", post_like_path(post), :class => "btn btn-danger my-2", method: :post %>
                   <% end %>
-                <small class="text-muted"><%= post.likes.where(post_id: post.id).count %> Likes</small>
+                </div>
+                <small class="text-muted"><%= post.likes.where(post_id: post.id).count %> ♥️</small>
               </div>
             </div>
           </div>
