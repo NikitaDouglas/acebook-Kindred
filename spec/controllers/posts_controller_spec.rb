@@ -3,10 +3,6 @@
 require 'rails_helper'
 
 RSpec.describe PostsController, type: :controller do
-  # before(:each) do
-  #   sign_up
-  # end
-
   describe 'GET /new ' do
     it 'responds with 200' do
       get :index
