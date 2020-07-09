@@ -27,7 +27,8 @@
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+
+<%= render "partials/alert_notice" %>
+
 </body>
 <%= render "devise/shared/links" %>

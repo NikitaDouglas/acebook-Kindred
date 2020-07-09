@@ -8,9 +8,9 @@ RSpec.feature 'Timeline', type: :feature do
     sign_up
     visit '/posts'
     click_link 'Write a post...'
-    fill_in 'Message', with: 'Hello, world!'
+    fill_in 'Message', with: 'Hello world!'
     click_button 'Submit'
-    expect(page).to have_content('Hello, world!')
+    expect(page).to have_content('Hello world!')
   end
 
   scenario 'Can see posts information' do
@@ -22,6 +22,8 @@ RSpec.feature 'Timeline', type: :feature do
     fill_in 'Message', with: 'hey there'
     click_button 'Submit'
     expect(page).to have_content('So')
+    expect(page).to have_content('hey there')
     expect(page).to have_content(Date.today)
+    expect(page).to have_content('test@example.com')
   end
 end

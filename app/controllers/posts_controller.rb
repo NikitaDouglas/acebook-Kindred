@@ -8,6 +8,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.create(post_params)
     redirect_to posts_url
+    p @post
   end
 
   def index
@@ -17,6 +18,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:message, :email, :name)
+    params.require(:post).permit(:message, :name).merge(user_id: current_user.id)
   end
 end
