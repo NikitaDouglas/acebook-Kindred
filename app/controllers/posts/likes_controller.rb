@@ -5,16 +5,20 @@ class Posts::LikesController < ApplicationController
 
   def create
     @post = Post.find(params[:post_id])
-    p @post
     @post.likes.where(user_id: current_user.id, post_id: @post.id).first_or_create
-    redirect_to posts_url
+    respond_to do |format|
+      format.html { redirect_to posts_url }
+      format.js
+    end
   end
 
   def destroy
     @post = Post.find(params[:post_id])
-    p @post
     @post.likes.where(user_id: current_user.id, post_id: @post.id).destroy_all
-    redirect_to posts_url
+    respond_to do |format|
+      format.html { redirect_to posts_url }
+      format.js
+    end
   end
 
   private
