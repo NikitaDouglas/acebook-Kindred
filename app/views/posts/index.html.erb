@@ -1,3 +1,4 @@
+
 <%= render "partials/navbar" %>
 
   <section class="jumbotron text-center">
@@ -20,10 +21,11 @@
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
             <div class="card-body">
-              <h3 class="card-text"> <%= post.name %></h3>
+              
+              <h3 class="card-text"> <%= post.message %></h3>
+              <h4 class="card-text"> posted by <%= post.name %></h4>
               <p class="card-muted"> <%= post.user.email %></p>
-              <p class="card-text"> <%= post.message %></p>
-                <p class="text-muted"> <%= post.created_at %></p>
+              <p class="text-muted"> <%= post.created_at %></p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <% if user_signed_in? && current_user.likes?(post) %>
@@ -32,7 +34,7 @@
                     <%= button_to "♥️", post_like_path(post), :class => "btn btn-danger my-2", method: :post %>
                   <% end %>
                   <% if user_signed_in? && current_user.id == post.user_id %>
-                    <%= button_to "Delete", post_path(post), :class => "btn btn-light my-2", method: :delete %>
+                    <%= button_to "Delete Post", post_path(post), :class => "btn btn-light my-2", method: :delete %>
                   <% end %>
                 </div>
                 <small class="text-muted"><%= post.likes.where(post_id: post.id).count %> ♥️</small>
@@ -43,3 +45,5 @@
       </div>
     </div>
 <% end %>
+
+</body>

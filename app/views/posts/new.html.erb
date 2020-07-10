@@ -1,15 +1,39 @@
 <%= render "partials/navbar" %>
 
-
+  <section class="jumbotron text-center">
+    <div>
+    <%= render "partials/alert_notice" %>
+    </div>
+    <div class="container">
+      <h1>Kindred</h1>
+      <p class="lead text-muted">Write a new post...</p>
+    </div>
+  </section>
 <br>
-<section class="text-center">
+
 <%= form_for @post do |form| %>
-  <%= form.label :message %>
-  <%= form.text_field :message %>
+<div class="album py-5 bg-light center">
+    <div class="container text-center">
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body center ">
+                 <h4 class="card-text"> <%= form.label :name %></h4>
+                <p class="text-muted"> <%= form.text_field :name %> </p>
+              <h4 class="card-text"> <%= form.label :message %> </h4>
+                <p class="text-muted"> <%= form.text_field :message %> </p>
+         
+                <%= form.submit "Submit", :class => "btn btn-danger my-2" %>
+                <% end %> 
+            <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <%= form.label :name %>
-  <%= form.text_field :name %>
 
-  <%= form.submit "Submit" %>
-<% end %>
-</section>
+      
+   
