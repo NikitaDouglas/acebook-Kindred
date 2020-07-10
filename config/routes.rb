@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   resources :posts do
-  resource :like, module: :posts
-end
-
+    resource :like, module: :posts
+  end
 end

@@ -2,9 +2,9 @@
 
 class Post < ApplicationRecord
 
+  belongs_to :user
+  
   def likes
-    # p "hello"
-    # Like.find_by(post_id: id)
     Like.all
   end
 
