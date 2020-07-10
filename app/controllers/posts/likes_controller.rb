@@ -4,7 +4,7 @@ class Posts::LikesController < ApplicationController
   before_action :authenticate_user!
 
   def create
-    @post = Post.find(params[:post_id])
+    set_post
     @post.likes.where(user_id: current_user.id, post_id: @post.id).first_or_create
     respond_to do |format|
       format.html { redirect_to posts_url }
