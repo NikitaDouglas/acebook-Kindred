@@ -31,6 +31,9 @@
                   <% else %>
                     <%= button_to "♥️", post_like_path(post), :class => "btn btn-danger my-2", method: :post %>
                   <% end %>
+                  <% if user_signed_in? && current_user.id == post.user_id %>
+                    <%= button_to "Delete", post_path(post), :class => "btn btn-light my-2", method: :delete %>
+                  <% end %>
                 </div>
                 <small class="text-muted"><%= post.likes.where(post_id: post.id).count %> ♥️</small>
               </div>
