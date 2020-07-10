@@ -20,7 +20,6 @@ RSpec.describe Posts::LikesController, type: :controller do
       sign_in
       post = Post.create!(message: 'Hello, world!')
       post 'create', params: { post_id: post.id }
-      p Like.find_by(post_id: post.id)
       expect(Like.find_by(post_id: post.id)).to be
     end
   end
