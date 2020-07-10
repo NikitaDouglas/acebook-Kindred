@@ -12,6 +12,6 @@ feature 'User can like a post' do
     visit('/')
     sign_up
     add_post_helper
-    expect(page).to have_button(@id = 'like')
+    expect(page).to have_button('♥️')
   end
 end
